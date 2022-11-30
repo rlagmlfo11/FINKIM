@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app1">
+    {{name}}
+    <button @click="changeText">click</button>
+  </div>
+
+  <div id="app2">
+    {{name}}
+    <button @click="changeText">click</button>
+
+  </div>
+
+
+
+  <script>
+    // new Vue를 함수로 지정한다
+    const app1 = new Vue ({
+      el:"#app1",
+      data: {
+        name: "fin1"
+      },
+      methods: {
+        changeText(){
+          app1.name = "fin1 updated";
+          // this.name을 지정한 함수 app.name으로 바꿀수있음
+        }
+      }
+    })
+
+    const app2 = new Vue ({
+      el:"#app2",
+      data: {
+        name: "fin2"
+      },
+      methods: {
+        changeText(){
+          app1.name = "fin2 updated";
+        }
+      }
+    })
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="app">
+    <div>
+      {{ people[0].name }} {{ people[0].age }}
+    </div>
+    <div>
+      {{ people[1].name }} {{ people[1].age }}
+    </div>
+    <div>
+      {{ people[2].name }} {{ people[2].age }}
+    </div>  
+    <div>
+      {{ people[3].name }} {{ people[3].age }}
+    </div>
+    <hr>
+    <div v-for="(person, index) in people" :key="person.name">
+      {{ person.name }} {{ person.age }} {{ index }}
+      <!-- key는 고유한 항목으로 지정하되 인덱스로 하면 안됨 -->
+    </div>
+
+  </div>
+  <script>
+    new Vue({
+      el:"#app",
+      data: {
+        people: [
+          {name: "a", age: 20},
+          {name: "b", age: 30},
+          {name: "c", age: 40},
+          {name: "d", age: 10},
+          {name: "as", age: 10},
+          {name: "er", age: 10},
+          {name: "e", age: 0},
+        ]
+      },
+      methods: {
+
+      }
+    })
+    
+  </script>
+
+
+</body>
+</html>

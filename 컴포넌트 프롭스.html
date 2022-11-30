@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컴포넌트 프롭스</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <wordrelay first="나는"></wordrelay>
+        <wordrelay first="오늘"></wordrelay>
+        <wordrelay first="너무"></wordrelay>
+        <wordrelay first="심심"></wordrelay>
+        <wordrelay first="하다"></wordrelay>
+    </div>
+
+
+    <script>
+        Vue.component("wordrelay", {
+            template: `
+            <div>
+            <div>{{start}}</div>
+            <form v-on:submit="onsubmit">
+            <input type="text" v-model="value" ref="answer">
+            <button>확인</button>
+            </form>
+            <div>{{result}}</div>
+            </div>
+            `,
+            props: ["first"],
+            data(){
+                return{
+                    start: this.first,
+                    value: "",
+                    result: "",
+                }
+            },
+            methods: {
+                onsubmit(e){
+                        e.preventDefault()
+                        if(this.start[this.start.length - 1] === this.value[0]){
+                            this.result = "yes";
+                            this.start = this.value;
+                            this.value = "";
+                            this.$refs.answer.focus()
+                        } else {
+                            this.result = "nope"
+                            this.value = "";
+                            this.$refs.answer.focus()
+
+                        }
+                    }
+            }
+        })
+
+
+
+        new Vue ({
+            el: "#app",
+        })
+
+
+    </script>
+
+
+
+</body>
+</html>
