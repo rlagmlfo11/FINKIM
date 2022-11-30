@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            자바스크립트4
+        </title>
+        <style>
+       
+        </style>
+    </head>
+    <body>
+        <h1 id="문서">문서인터페이스</h1>
+        <h2>배고팡</h2>
+        <p>삼겹살먹고싶다</p>
+        <p id="치킨">치킨먹고싶다</p>
+        <p class="삼겹살">치킨먹고싶다</p>
+
+       ............비교하자
+
+    <script>
+        //console.log(document.querySelector("#문서"))
+        //console.log(document.querySelector("h2"))
+        //console.log(document.querySelector("p"))
+        //console.log(document.querySelector("#치킨"))
+        //console.log(document.querySelector(".삼겹살"))
+
+        //console.log(document.getElementById("문서"))
+        //console.log(document.getElementById("치킨"))
+
+        const h1 = document.querySelector("h1")
+        const p = document.getElementById("치킨")
+        
+        console.log(h1.textContent)
+        h1.textContent = "나는"
+
+        p.textContent = "족발"
+        console.log(p)
+
+        console.log("1"==1)
+        console.log("1"===1)
+        console.log(1===1)
+
+        let num1 = 3;
+        let num2 = 5;
+
+        console.log(num1>num2)
+        console.log(num1<num2)
+        
+
+      
+
+        
+
+
+        
+
+
+
+
+        
+    
+    </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            자바스크립트8
+        </title>
+        <style>
+       
+        </style>
+    </head>
+    <body>
+     value를 써보자
+
+    <form>
+        <input type="text" placeholder="이름을 입력해라" id="name">
+        <input type="text" placeholder="동네를 입력해라" id="town">
+        <input type="submit" value="확인">
+    </form>
+    <hr>
+    삼항연산 ??? 잘안뎌
+    <select>
+        <option value="foot" selected>축구</option>
+        <option value="base">야구</option>
+        <option value="basket">농구</option>
+    </select>
+    <button>PICK</button>
+
+
+    <script>
+        
+        const select = document.querySelector("select")
+        const button = document.querySelector("button")
+
+        button.addEventListener("click", function(){
+            console.log(select.value)
+            let result;
+            result = select.vale == "foot" ?
+            "축구를 선택함" : "축구 선택안함"
+            alert(result)
+        })
+
+
+
+        const form = document.querySelector("form")
+
+        form.addEventListener("submit", function(e){
+            e.preventDefault()
+            console.log(form.name.value)
+            console.log(form.town.value)
+        })
+        
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+

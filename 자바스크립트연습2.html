@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>자바스크립트연습2</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        밤과 낮을 구분
+        <input type="button" value="night" onclick="night()">
+        <input type="button" value="day" onclick="day()">
+
+
+        <hr>
+        다이브 추가
+
+        <input type="button" id="button" value="추가하기">
+        <div id="dive"></div>
+
+
+        <!-- <input type="button" id="push" value="add">
+        <div id="addbox"></div>
+    
+    <script>
+        const PUSH = document.getElementById("#push")
+        const addbox = document.getElementById("#addbox")
+    
+        PUSH.addEventListener("click", function(){
+            const NEWDIV = document.createElement("addbox")
+            NEWDIV.style.backgroundColor = "red"
+            NEWDIV.style.margin = "10px"
+            NEWDIV.style.width = "30px"
+            NEWDIV.style.length = "30px"
+            addbox.appendChild(NEWDIV)
+        })
+    </Script> -->
+        <hr>
+        동네이름적어서제출해라
+        <form>
+        <input type="text" placeholder="이름을 적어라" id="name">
+        <input type="text" placeholder="동네를 적어라" id="town">
+        <input type="submit" value="확인">
+        </form>
+
+        <script>
+
+
+            const button = document.getElementById("button")
+            const dive = document.getElementById("dive")
+
+            button.addEventListener("click", function(){
+                console.log("다이브추가중입니다")
+                const newDive = document.createElement("div")
+                newDive.style.backgroundColor = "red"
+                newDive.style.width = "30px"
+                newDive.style.height = "30px"
+                newDive.style.margin = "10px"
+                dive.appendChild(newDive)
+            })
+
+            
+
+        const form = document.querySelector("form")
+        form.addEventListener("click", function(e){
+            e.preventDefault()
+            console.log(form.name.value)
+            console.log(form.town.value)
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+            function night(){
+                document.bgColor = "black"
+                document.fgColor = "white"
+            }
+            function day(){
+                document.bgColor = "white"
+                document.fgColor = "black"
+            }
+
+
+
+
+
+        </script>
+    </body>
+</html>

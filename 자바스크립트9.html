@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            자바스크립트9
+        </title>
+        <style>
+       
+        </style>
+    </head>
+    <body>
+    생성자
+    <hr>
+    <h1>날짜와 시간</h1>
+    <hr>
+    타이머를 만들거야
+
+    <button>button</button>
+
+    button으로 타이머를 멈출수있음 우헤헤 
+    
+    <script>
+        
+        function Dog(paraName, parazBreed){
+            this.name = paraName
+            this.breed = parazBreed
+        }
+        const dog1 = new Dog("오복", "시바")
+        const dog2 = new Dog("일복", "진돗개")
+        const dog3 = new Dog("삼복", "맷돼지")
+        const dog4 = new Dog("십옥", "양준")
+        console.log(dog1)
+        console.log(dog2)
+        console.log(dog3)
+        console.log(dog4)
+
+        //IMPORTANT ㅋㅋ
+        const h1 = document.querySelector("h1")
+        const now = new Date()
+        const hour = now.getHours()
+        const minu = now.getMinutes()
+        const seco = now.getSeconds()
+        const Time = '$(hour):$(minu):$(seco)'
+        h1.textContent = now
+
+        console.log(now.toLocaleString("kr"))
+
+        setTimeout(function(){
+            console.log("5초후에나온다")
+        }, 5000)
+
+        const button = document.querySelector("button")
+
+        let interId;
+        interId = setInterval(function(){
+            console.log("3초마다나옴")
+        }, 3000)
+        console.log(interId)
+        
+        button.addEventListener("click", function(){
+            clearInterval(interId)
+        })
+        
+
+
+     
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+

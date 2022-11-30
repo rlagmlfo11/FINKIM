@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            자바스크립트7
+        </title>
+        <style>
+       
+        </style>
+    </head>
+    <body>
+        <p>이벤트</p>
+
+        <button id="one">버튼1</button>
+        <button id="two">버튼2</button>
+        <button id="three">버튼3</button>
+        <hr>
+
+        <p>크리에이트 엘리먼트!!(어펜드차일드 and append)</p>
+        <button id="push">버틍이다</button>
+        <div id="area">zz</div>
+        <hr>
+        어펜드차일드는 문자추가 안뎌
+
+    <script>
+        const button1 = document.getElementById("one")
+        const button2 = document.getElementById("two")
+        const button3 = document.getElementById("three")
+
+        const handleClick = function(event){
+            console.log(event.target)
+        }
+
+        button1.addEventListener("click", handleClick)
+        button2.addEventListener('click', handleClick)
+        button3.addEventListener('click', function(){
+            console.log("button3를 클릭함")
+        })
+
+        button1.removeEventListener("click", handleClick)
+
+
+
+
+        
+        const push = document.querySelector("#push")
+        const div1 = document.querySelector("#area")
+
+        push.addEventListener("click",function(){
+            console.log("div생성됨")
+            const newDiv = document.createElement("div")
+            newDiv.style.backgroundColor = "red";
+            newDiv.style.width = "200px"
+            newDiv.style.height = "200px"
+            div1.appendChild(newDiv)
+        })
+
+        
+
+        
+      
+
+
+        
+
+       
+
+
+    </script>
+    </body>
+</html>

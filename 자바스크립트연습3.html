@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            자바스크립트연습1
+        </title>
+        <style>
+            .text{
+                color: red;
+            }
+        </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    </head>
+    <body>
+    <p>밤낮</p>
+    <p>토글 에드 리무브</p>
+    <p>다이브추가하가</p>
+    <p>동네는 어디야</p>
+    <hr>
+
+    <form>
+    <input type="text" id="name" placeholder="이름">
+    <input type="text" id="town" placeholder="동네">
+    <input type="submit" value="제출">
+    <form>
+    <hr>
+    해가지기전에 가려했지
+    <button id="daybutton" onclick="day()">day</button>
+    <button id="nightbutton" onclick="night()">night</button>
+    <hr>
+    <input type="button" id="divadd" value="다이브추가하기">
+    <div id="dive"></div>
+    <hr>
+    <h1>빨간글씨가된다</h1>
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <button id="toggle">toggle</button>
+
+    <script>
+    const h1 = document.querySelector("h1")
+    const add = document.getElementById("add")
+    const remove = document.querySelector("#remove")
+    const toggle = document.querySelector("#toggle")
+
+    add.addEventListener("click", function(){
+        h1.classList.add("text")
+        console.log("add버튼")
+    })
+    remove.addEventListener("click", function(){
+        h1.classList.remove("text")
+        console.log("remove버튼")
+    })
+    toggle.addEventListener("click", function(){
+        h1.classList.toggle("text")
+        console.log("toggle버튼")
+    })
+
+
+    const div = document.getElementById("dive")
+    const adding = document.getElementById("divadd")
+
+    adding.addEventListener("click", function(){
+        console.log("div추가중입니다")
+        const newDiv = document.createElement("div")
+        newDiv.style.backgroundColor = "red"
+        newDiv.style.margin = "10px"
+        newDiv.style.width = "30px"
+        newDiv.style.height = "30px"
+        div.appendChild(newDiv)
+    })
+
+
+    function day(){
+        document.bgColor = "white"
+        document.fgColor = "black"
+        console.log("데이모드온")
+    }
+
+    function night(){
+        document.bgColor = "black"
+        document.fgColor = "white"
+        console.log("나이트모드온")
+    }
+
+    
+    const form = document.querySelector("form")
+    form.addEventListener("click", function(e){
+        e.preventDefault()
+        console.log(form.name.value)
+        console.log(form.town.value)
+    })
+
+
+
+
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

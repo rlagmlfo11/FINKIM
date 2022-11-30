@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            자바스크립트10
+        </title>
+        <style>
+        .text{
+            color: red;
+        }
+        </style>
+    </head>
+    <body>
+        클래스리스트 add remove toggle
+
+        <h1 id="red">실험테스트</h1>
+        <button id="add">add</button>
+        <button id="remove">remove</button>
+        <button id="toggle">toggle</button>
+        <hr>
+        배열에대해서 알아보자 in 2ways
+
+    <script>
+        
+        const HOT = ["양준","봉석이","형민이"]
+        let index = 0
+        console.log(HOT[index])
+        HOT[index] = "쭈니"
+        console.log(HOT[0])
+
+    
+        const h1 = document.querySelector("h1")
+            const add = document.querySelector("#add")
+            const remove = document.querySelector("#remove")
+            const toggle = document.querySelector("#toggle")
+
+            console.log(h1.classList)
+
+            add.addEventListener("click", function(){
+                h1.classList.add("text")
+            })
+            remove.addEventListener("click", function(){
+                h1.classList.remove("text")
+            })
+            toggle.addEventListener("click", function(){
+                h1.classList.toggle("text")
+            })
+
+
+
+
+
+
+     
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+

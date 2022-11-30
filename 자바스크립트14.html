@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            자바스크립트14
+        </title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        로컬스토리지(settime)
+        리무브아이템이랑 클리어
+        배열메소드를 더 배워봐요 foreach map filter
+
+
+    <script>
+        const Fin = "김희래"
+        console.log(Fin)
+
+        localStorage.setItem("Fin",Fin)
+        
+        const aa = localStorage.getItem("Fin")
+        alert(aa)
+
+        localStorage.setItem("cat", "고양이")
+        localStorage.setItem("dog", "오복이")
+        localStorage.setItem("Fin", "잘생김")
+
+        localStorage.clear()
+
+        const twice = ["희승", "양준", "슬기", "형민"]
+        twice.forEach(function(member, index){
+            const p = document.createElement("p")
+            p.textContent = "${index + 1}번째멤버 ${number}"
+            document.body.appendChild(p)
+        })
+
+        const Friends = ["희승", "양준", "슬기", "형민"]
+        const result = Friends.map(function(member,){
+            return "병신같은 $[Friends]"
+        })
+        console.log(result)
+
+        const shits = ["희승", "양준", "슬기", "형민"]
+
+        const love = shits.filter(function(member){
+            return member === "양준"
+        })
+        console.log(love)
+
+
+
+
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+

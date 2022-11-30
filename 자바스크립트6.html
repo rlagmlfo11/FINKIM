@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            자바스크립트6
+        </title>
+        <style>
+       
+        </style>
+    </head>
+    <body>
+     함수를 배운다(function으로 대상을 지정하고 콘솔을넣어서 기억시킴)<br>
+     함수 선언식<br>
+     데이터반환 returnnnnn<br>
+     함수의 이런저런기능들들들들.....
+
+    <script>
+        
+        function sayhello(){
+            console.log("hello")
+            console.log("hi")
+            console.log("안녕")
+        } 
+        sayhello()
+
+        const hi = function(){
+            console.log("what")
+        }
+        hi()
+        sayhello()
+        console.log(sayhello)
+        
+        function getthree(){
+            return 3;
+        }
+        console.log(getthree)
+
+        function Noreturn(){
+            console.log("반환 노노해")
+        }
+        const result = Noreturn()
+        console.log(result)
+      
+        function reTurn(){
+            console.log("resturnnnn")
+            return 10, 50 //마지막에 쓰인것만 반환하고 함수를 종료시킴
+        }
+        const result2 = reTurn()
+        console.log(result2)
+        
+        function Fin(){
+            console.log("FINNNNN")
+            let dd = 5
+            return dd
+        }
+
+        const result3 = Fin
+        console.log(result3)
+        
+        function Sayanything(ant, number){
+            for(let i = 0; i < number; i++)
+            console.log(ant)
+        }
+        Sayanything("love", 2)
+        Sayanything("peace", 6)
+
+        function oddEven(number){
+            if(number % 2 == 1){
+                return "홀수"
+            }else{
+                return "짝수"
+            }
+        }
+        console.log(oddEven(15))
+        console.log(oddEven(10))
+        
+
+
+
+    </script>
+    </body>
+</html>
